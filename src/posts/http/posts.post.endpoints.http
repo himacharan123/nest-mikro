@@ -1,0 +1,14 @@
+POST http://localhost:3000/posts 
+Content-Type: application/json
+{
+   "title": "What's new with nest js",
+   "postType": "post",
+   "slug": "new-with-nestjs-99",
+   "status": "draft",
+   "content": "test",
+   "schema": "{ \"@context\": \"https://schema.org\", \"@type\": \"Person\" }",
+   "featuredImageUrl": "http://localhost.com/images/image1.jpg",
+   "publishedOn": "2024-09-24T14:30:00Z",
+
+   "authorId": 1
+}

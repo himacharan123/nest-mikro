@@ -1,0 +1,12 @@
+# user Post Request
+
+POST http://localhost:3000/users
+Content-Type:application/json
+{
+    "firstname":"hima charan",
+    "lastname":"simhadri",
+    "email":"charanhima13@gmail.com",
+    "password":"Abcd@123"
+  
+  
+}

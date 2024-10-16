@@ -1,0 +1,18 @@
+POST http://localhost:3000/users/create-many
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJlbWFpbCI6ImNoYXJhbmhpbWExM0BnbWFpbC5jb20iLCJpYXQiOjE3MjkwNTgxNzUsImV4cCI6MTcyOTA2MTc3NSwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.hQGpBsNX9FW4b7wXrmkPADLTpu4X7hibY3bI-kfz44E
+
+[
+  {
+    "firstname": "Jhon",
+    "lastname": "Snow",
+    "email": "jhonsnows123456@gmail.com",
+    "password": "Abcd@123"
+  },
+  {
+    "firstname": "Jhon",
+    "lastname": "Rock",
+    "email": "jhonsnowsss1234@gmail.com",
+    "password": "Abcd@123"
+  }
+]

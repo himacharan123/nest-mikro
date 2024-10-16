@@ -1,0 +1,8 @@
+// Pre-request script
+{// Pre-request script
+{const date = new Date();
+globalThis.startDate = date.toISOString(); // Assign the current date as ISO string
+globalThis.endDate = date.toISOString();}
+}
+GET http://localhost:3000/posts/?startDate=2024-10-06T14:53:00.000Z&endDate=2024-10-06T14:53:00.000Z&limit=10&page=1
+
