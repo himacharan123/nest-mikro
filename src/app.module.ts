@@ -9,6 +9,10 @@ import {ConfigModule  } from "@nestjs/config";
 import { MetaOptionsService } from '../src/meta-options/provider/meta-options.service';
 import { PostsModule } from './posts/posts.module';
 import { PaginationModule } from './common/pagination/pagination.module';
+import jwtConfig from './auth/config/jwt.config';
+import { JwtModule } from '@nestjs/jwt';
+import { APP_GUARD } from '@nestjs/core';
+import { AccessTokenGuard } from './auth/guards/acess-token/acess-token.guard';
 
 @Module({
   imports: [
@@ -20,8 +24,17 @@ import { PaginationModule } from './common/pagination/pagination.module';
     PaginationModule,
     ConfigModule.forRoot(
       { isGlobal:true}
+      
     ),
+    ConfigModule.forFeature(jwtConfig),JwtModule.registerAsync(jwtConfig.asProvider())
   ],
-  providers: [MetaOptionsService],
+  providers: [MetaOptionsService
+,{
+  provide:APP_GUARD,
+  useClass:AccessTokenGuard,
+}
+
+
+  ],
 })
 export class AppModule {}
